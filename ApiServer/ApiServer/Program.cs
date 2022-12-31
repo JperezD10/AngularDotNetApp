@@ -2,6 +2,7 @@ using DataAccess;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Repository;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

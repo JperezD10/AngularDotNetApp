@@ -86,3 +86,7 @@ C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bi
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Repository.dll
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\DataAccess.pdb
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Repository.pdb
+C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\XAct.Core.PCL.dll
+C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Services.dll
+C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Services.pdb

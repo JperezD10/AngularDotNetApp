@@ -27,7 +27,7 @@ namespace Repository
 
         public async Task Delete(int id)
         {
-            T entity = await EntitySet.FindAsync(id);
+            T? entity = await EntitySet.FirstOrDefaultAsync(e => e.Id == id);
             EntitySet.Remove(entity);
             await _context.SaveChangesAsync();
         }
