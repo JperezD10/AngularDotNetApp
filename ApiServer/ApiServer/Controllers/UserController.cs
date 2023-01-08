@@ -17,6 +17,13 @@ namespace ApiServer.Controllers
         {
             _userService = userService;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateUser([FromBody] User user)
+        {
+            var response = await _userService.CreateUser(user);
+            return StatusCode((int)response.StatusCode, response);
+        }
         
     }
 }

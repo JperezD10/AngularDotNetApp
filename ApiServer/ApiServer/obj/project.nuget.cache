@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UxTs3mI/ez9oK3lvKqAsDJiqqTx5/2IMjNRKWqmau6EO75z0WE54fSI7nTpHuiUg7YAsVn4lFz/+EGv1BuYpMA==",
+  "dgSpecHash": "RF0xoJ+qs71Ys2vQ9STj/6bBEKFqAcidyz0tH5CFgk9yCRDuXxwAff8gxh9yCbnZgjSo+2rS3BD6n2FnhRwnRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juli\\Desktop\\Cursitos\\FullStack\\AngularDotNetApp\\ApiServer\\ApiServer\\ApiServer.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Juli\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Juli\\.nuget\\packages\\commonservicelocator\\1.3.0\\commonservicelocator.1.3.0.nupkg.sha512",
     "C:\\Users\\Juli\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Juli\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.12\\microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
     "C:\\Users\\Juli\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Juli\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Juli\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",

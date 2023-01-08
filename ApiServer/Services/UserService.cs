@@ -13,9 +13,12 @@ namespace Services
     public class UserService : IUserService
     {
         private readonly IRepository<User> _repository;
-        public UserService(IRepository<User> repository)
+        private readonly ITokenHandlerService _tokenService;
+
+        public UserService(IRepository<User> repository, ITokenHandlerService tokenService)
         {
             _repository = repository;
+            _tokenService = tokenService;
         }
         public async Task<ApiResponse> CreateUser(User user)
         {
@@ -62,21 +65,25 @@ namespace Services
             }
         }
 
-        public async Task<ApiResponse> Login(User user)
+        public async Task<LoginResponse> Login(LoginDTO userLogin)
         {
             try
             {
-                user.Password = CryptService.Crypt(user.Password);
-                var existUser = (await _repository.GetAll()).Any(u => u.Username == user.Username && u.Password == user.Password);
-                if (existUser)
-                    return new ApiResponse(HttpStatusCode.OK, $"");
-                else
-                    return new ApiResponse(HttpStatusCode.BadRequest, $"User not found");
-
+                userLogin.Password = CryptService.Crypt(userLogin.Password);
+                var User = (await _repository.GetAll()).FirstOrDefault(u => u.Username == userLogin.Username && u.Password == userLogin.Password);
+                if (User == null)
+                    return new LoginResponse(null,User,HttpStatusCode.BadRequest, $"User not found");
+                var token = _tokenService.GenerateJwtToken(new TokenParameters()
+                {
+                    Id = User.Id.ToString(),
+                    PasswordHash = User.Password,
+                    UserName = User.Username,
+                });
+                return new LoginResponse(token, User, HttpStatusCode.OK, $"Welcome {User.Name}");
             }
             catch (Exception ex)
             {
-                return new ApiResponse(HttpStatusCode.InternalServerError, ex.Message);
+                return new LoginResponse(null, null, HttpStatusCode.InternalServerError, ex.Message);
             }
         }
     }

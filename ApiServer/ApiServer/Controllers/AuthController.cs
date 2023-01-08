@@ -17,10 +17,10 @@ namespace ApiServer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(User user)
+        public async Task<IActionResult> Login(LoginDTO user)
         {
             var response = await _userService.Login(user);
-            return StatusCode((int)response.StatusCode, response.Message);
+            return StatusCode((int)response.StatusCode, new {token = response.token, user = response.user, message = response.message});
         }
     }
 }

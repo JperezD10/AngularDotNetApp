@@ -90,3 +90,4 @@ C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bi
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\XAct.Core.PCL.dll
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Services.dll
 C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Services.pdb
+C:\Users\Juli\Desktop\Cursitos\FullStack\AngularDotNetApp\ApiServer\ApiServer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
