@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -13,6 +14,10 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule,
+    HttpClientModule
   ],
   exports:[
     LoginComponent,

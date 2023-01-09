@@ -37,6 +37,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddCors(options => options.AddPolicy("AllowWebApp", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddScoped<IRepository<User>, Repository<User>>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITokenHandlerService, TokenHandlerService>();
@@ -51,7 +52,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors("AllowWebApp");
 app.UseAuthorization();
 app.UseAuthentication();
 app.MapControllers();
